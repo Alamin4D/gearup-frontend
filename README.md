@@ -15,7 +15,7 @@ Customers can explore verified equipment, calculate rental duration and tiered c
 
 ## 🚀 Live Demo & Links
 
-- **Frontend Repository**: [https://github.com/m-d-Irfan/Frontend_Gear_up_prisma_Stripe](https://github.com/m-d-Irfan/Frontend_Gear_up_prisma_Stripe)
+- **Frontend Repository**: [https://github.com/Alamin4D/gearup-frontend](https://github.com/Alamin4D/gearup-frontend)
 - **Live Backend API**: `https://backend-gear-up-prisma-stripe.vercel.app/api/v1`
 - **Frontend Live Deployment**: Deployed on Vercel
 
