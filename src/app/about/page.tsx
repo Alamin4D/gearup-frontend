@@ -6,6 +6,7 @@ import { Compass, ShieldCheck, Users, Award, HeartHandshake, Dumbbell, ArrowRigh
 import apiClient from '@/lib/axios';
 import { ApiResponse, Gear, LocationItem, RentalOrder } from '@/types';
 
+
 // Custom Count-Up Animation Hook
 function useCountUp(endValue: number, duration: number = 1800) {
   const [count, setCount] = useState<number>(0);
