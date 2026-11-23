@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --primary: #059669;
+    --primary-foreground: #ffffff;
+    --secondary: #0d9488;
+    --secondary-foreground: #ffffff;
+    --border: #e2e8f0;
+  }
+
+  .dark {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
+    --primary: #10b981;
+    --primary-foreground: #0f172a;
+    --secondary: #14b8a6;
+    --secondary-foreground: #0f172a;
+    --border: #334155;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Bulletproof Explicit Theme Rules for Light and Dark Modes */
+
+/* LIGHT MODE */
+html.light, 
+html.light body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light header {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light header nav a:not(.bg-slate-900) {
+  color: #334155 !important;
+}
+
+html.light header nav a:hover {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+}
+
+html.light .ambient-bg {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(16, 185, 129, 0.06) 0px, transparent 50%),
+    radial-gradient(at 90% 20%, rgba(13, 148, 136, 0.05) 0px, transparent 50%),
+    radial-gradient(at 50% 90%, rgba(15, 23, 42, 0.03) 0px, transparent 50%) !important;
+}
+
+html.light section.bg-white,
+html.light div.bg-white,
+html.light article.bg-white {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .glass-card {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* DARK MODE */
+html.dark, 
+html.dark body {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+html.dark header {
+  background-color: rgba(15, 23, 42, 0.96) !important;
+  border-color: #334155 !important;
+}
+
+html.dark header nav a:not(.bg-emerald-600) {
+  color: #cbd5e1 !important;
+}
+
+html.dark header nav a:hover {
+  color: #ffffff !important;
+  background-color: #1e293b !important;
+}
+
+html.dark .ambient-bg {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+    radial-gradient(at 90% 20%, rgba(20, 184, 166, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 90%, rgba(30, 41, 59, 0.5) 0px, transparent 50%) !important;
+}
+
+html.dark section.bg-white,
+html.dark div.bg-white,
+html.dark article.bg-white {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+html.dark .glass-card {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+/* Typography & Accent Overrides */
+html.light .gradient-text {
+  color: #0f172a !important;
+}
+
+html.dark .gradient-text {
+  color: #f8fafc !important;
+}
+
+html.light .highlight-text {
+  color: #059669 !important;
+}
+
+html.dark .highlight-text {
+  color: #10b981 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html.light ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
